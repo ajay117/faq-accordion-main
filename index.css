@@ -53,14 +53,12 @@ main {
 
 h1 {
   font-weight: 700;
-  /* margin: 0; */
   margin-bottom: 0;
-  /* margin-top: 0; */
 }
 
 details {
   margin: 0;
-  padding: 0.1rem 0;
+  padding: 1rem 0;
 }
 
 summary {
@@ -68,11 +66,13 @@ summary {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   line-height: 1.2;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
-summary p {
+summary::before {
+  content: attr(data-text);
   flex: 2;
 }
 summary svg {
@@ -122,6 +122,7 @@ details[open] .icon-minus {
   display: flex;
   align-items: baseline;
   gap: 30px;
+  margin: 25px 0;
 }
 .thin-border {
   border-bottom: 2px solid var(--light-pink);
