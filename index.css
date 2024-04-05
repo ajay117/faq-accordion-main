@@ -52,7 +52,7 @@ main {
 }
 
 h1 {
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
@@ -62,13 +62,17 @@ details {
 }
 
 summary {
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
   line-height: 1.2;
   font-size: 1.6rem;
+}
+
+summary:active {
+  color: #ad28eb;
 }
 
 summary::before {
