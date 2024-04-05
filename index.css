@@ -24,6 +24,11 @@
   --font-worksans-variable: "WorkSans-VariableFont_wght.ttf";
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   font-size: 10px;
 }
@@ -35,6 +40,9 @@ body {
   background-color: var(--light-pink);
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -51,7 +59,8 @@ h1 {
 }
 
 details {
-  padding: 20px 0;
+  margin: 0;
+  padding: 0.1rem 0;
 }
 
 summary {
@@ -72,6 +81,7 @@ summary svg {
 
 summary + p {
   color: var(--grayish-purple);
+  font-size: 1.5rem;
 }
 
 details summary::-webkit-details-marker,
@@ -86,11 +96,23 @@ details[open] .icon-plus {
 details[open] .icon-minus {
   display: block;
 }
+
+.background {
+  position: absolute;
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  top: 0;
+  z-index: -1;
+  width: 375px;
+  height: 232px;
+}
+
 /* || Classes */
 .container {
   padding: 0 25px;
   max-width: 600px;
 }
+
 .star {
   width: 30px;
   position: relative;
@@ -106,4 +128,11 @@ details[open] .icon-minus {
 }
 .icon-minus {
   display: none;
+}
+
+@media (min-width: 376px) {
+  .background {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    width: 100%;
+  }
 }
