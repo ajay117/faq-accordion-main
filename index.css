@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "WorkSans-Italic-VariableFont_wght.ttf";
+  src: url("./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "WorkSans-VariableFont_wght.ttf";
+  src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+
+  --font-worksans-italic: "WorkSans-Italic-VariableFont_wght.ttf";
+  --font-worksans-variable: "WorkSans-VariableFont_wght.ttf";
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--font-worksans-variable);
+  line-height: 1.5;
+  font-size: 1.6rem;
+  background-color: var(--light-pink);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: var(--white);
+  padding: 0 25px;
+  border-radius: 7px;
+}
+
+h1 {
+  font-weight: 700;
+  /* margin: 0; */
+  margin-bottom: 0;
+  /* margin-top: 0; */
+}
+
+details {
+  padding: 20px 0;
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  font-size: 1.8rem;
+}
+
+summary p {
+  flex: 2;
+}
+summary svg {
+  flex: 1;
+}
+
+summary + p {
+  color: var(--grayish-purple);
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+  content: "";
+}
+
+details[open] .icon-plus {
+  display: none;
+}
+details[open] .icon-minus {
+  display: block;
+}
+/* || Classes */
+.container {
+  padding: 0 25px;
+  max-width: 600px;
+}
+.star {
+  width: 30px;
+  position: relative;
+  top: 9px;
+}
+.faq_head {
+  display: flex;
+  align-items: baseline;
+  gap: 30px;
+}
+.thin-border {
+  border-bottom: 2px solid var(--light-pink);
+}
+.icon-minus {
+  display: none;
+}
